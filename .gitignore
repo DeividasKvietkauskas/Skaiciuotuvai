@@ -1,32 +1,25 @@
-# Prerequisites
-*.d
+#include <iostream>
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+using namespace std;
 
-# Precompiled Headers
-*.gch
-*.pch
+int main()
+{
+    double x, y, xx, yy, sk, brz, sumA, sumJ;
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+    cout << "Kokia skaiciuotuvo kaina?: "; cin >> sk;
+    cout << "Kokia bbraizymo irankiu rinkinio kaina?: "; cin >> brz;
+    cout << "Kiek mokytoja Adele pirks skaiciuotuvu ir braizymo irankiu rinkiniu?: "; cin >> x;
+    cin >> y;
+    cout << "Kiek mokytoja Juste pirks skaiciuotuvu ir braizymo irankiu rinkiniu?: "; cin >> xx;
+    cin >> yy;
+    sumA=(x*sk)+(y*brz);
+    sumJ=(xx*sk)+(yy*brz);
+    if (sumA>sumJ)
+        cout << "Agnes pirkinys kainuos brangiau("<< sumA << ")." << endl;
+         else if (sumJ>sumA)
+             cout << "Justes pirkinys kainuos brangiau("<< sumJ << ")." << endl;
 
-# Fortran module files
-*.mod
-*.smod
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
 
-# Executables
-*.exe
-*.out
-*.app
+    return 0;
+}
